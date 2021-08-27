@@ -1,0 +1,64 @@
+Ludlow CT 2 Review
+
+56M
+
+Issues
+1. Traumatic Brain Injury
+2. Hospital Acquired Pneumonia
+
+Review
+Airway: ETT
+
+Breathing
+Mode: SIMV
+Settings: *to be done (ps, peep, ie, vt)
+TVs: 
+RR: 22 FiO2: 0.21 SpO2: 92
+Exam: *Chest (Sounds)
+Gas: *pH: , pCO2: 6.68, pO2: 12.8, Bicarb: 18, BE: -2, Lact: 0.9
+
+Cardiovascular
+BP: 110/45 (*MAP)
+*Supported: / Unsupported
+HR 110 (*regular)
+Exam: *CVS (HS, CRT)
+
+Neurology
+Sedation: *prop / alften / midaz
+Paralysis: *atrac
+ICP: 8, CPP: 65
+Exam:  *GCS,  *pupils, *other
+
+Renal / Balances / GI
+Na: 145, K: 4.8, Urea: 9.6, Creat: 125, eGFR 84
+Mg: 0.88, aCa 2.25, Phos: 0.88
+Bili: 12, ALP 190, GGT 120, ALT: 38, Alb: 32
+Balances: +420mls
+Urine Output: 30mls/hr
+Feed: Jevity
+Glucose: 
+Asps: Nil
+Exam: *Abdo Exam
+
+Micro / Abx / Cultures
+Antibiotics: Tazocin day 5
+Cultures: cults
+Temp: 36.7
+WCC: 12.8, Neuts: 10, Hb 120, Plat 150
+CRP: 145, PCT: *pct
+
+Lines
+Art Line: Day 8 - keep
+CVC Line: Day 4 - keep
+PICC Line: Day 44 - Remove
+Other Line: nil
+
+Meds Review
+PPI: omeprazole
+Prokinetics: Nil
+Laxatives: Senna Macrogol
+VTE: lwmh + teds
+
+Summary
+
+Plan
