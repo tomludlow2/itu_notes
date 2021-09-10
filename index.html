@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors, Tom Ludlow">
     <meta name="generator" content="Hugo 0.80.0">
-    <title>Meds Converter</title>
+    <title>ITU Note creator</title>
     <style>
       .btn {
         margin-right: 10px;
@@ -76,6 +76,24 @@
         color: white;
       }
 
+      .gloss_descriptor {
+        font-style: italic;
+        font-family: monospace;
+      }
+
+      .shorthand_short {
+        color:  #0F0;
+      }
+
+      .shorthand_long {
+        font-weight: bold;
+      }
+
+      .review_header {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
     </style>
     
 
@@ -106,7 +124,7 @@
     
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Meds Converter</a>
+    <a class="navbar-brand" href="#">ITU Note Creator</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
@@ -127,23 +145,60 @@
   <div class="row">
     <div class="col">
       <h2>Input</h2>
-      <p>Copy and Paste Open Src Medications into the box below</p>
+      <p>This box will expect an input in a special order that you can see below. This is to make the note as quickly and efficienctly as possible.</p>
+      <p>Key usage</p>
+      <ul>
+        <li>[Enter] - Move to next field</li>
+        <li>[Up] - Move to last field</li>
+        <li>[Tab] - Done</li>
+      </ul>
+      <div class="card bg-dark text-white">
+        <div class="card-body" id="glossary_box">
+          Initialising...
+        </div>
+      </div>
+      <br/>
       <div class="textarea_div">
-        <textarea class="form-control" placeholder="Paste meds list" id="medsTA" style='height: 200px;'></textarea>
+        <textarea class="form-control" placeholder="Control Box" id="inputTA" style='height: 100px;'></textarea>
         <br/>
-        <button type="button" id='process_meds' class="btn btn-primary">Process</button>
       </div>
     </div>
     <div class="col">
       <h2>Output</h2>
-      <p>The formatted meds list will appear here, if possible it will automatically copy back to your clipboard (if using Chrome or Edge)</p>
+      <p>The patient note will appear here, if possible it will automatically copy back to your clipboard (if using Chrome or Edge)</p>
       <div id="meds_output">
-        <p>Ludlow CT 2 Review</p>
-        <p><span id="age_gender">56M</span></p>
-        <p>Issues</p>
-        <p><div id="issues"></div></p>
+        <p><span class="review_header" id="name_grade"></span></p>
+        <p><span id="age_gender"></span></p>
+        <p><span class="review_header">Issues</span></p>
+        <p><span class="review_header">Airway:- </span><br/>
+          <div id="airway"></div>
+        </p>
+        <p><span class="review_header">Breathing:- </span><br/>
+          <div id="breathing"></div>
+        </p>
+        <p><span class="review_header">Cardiovascular:- </span><br/>
+          <div id="cardiovascular"></div>
+        </p>
+        <p><span class="review_header">Neurology:- </span><br/>
+          <div id="disability"></div>
+        </p>
+        <p><span class="review_header">Renal / Balances / GI:- </span><br/>
+          <div id="renal"></div>
+        </p>
+        <p><span class="review_header">Micro / Abx / Cultures:- </span><br/>
+          <div id="micro"></div>
+        </p>
+        <p><span class="review_header">Lines / VTE:- </span><br/>
+          <div id="lines"></div>
+        </p>
+        <p><span class="review_header">Summary:- </span><br/>
+          <div id="summary"></div>
+        </p>
+        <p><span class="review_header">Plan:- </span><br/>
+          <div id="plan"></div>
+        </p>
+
       </div>
-      <button type="button" id='clipboard' class="btn btn-primary">Copy to Clipboard</button>
     </div>
   </div>
 </main><!-- /.container -->
@@ -156,9 +211,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-          <p>Convert medications into a clerking-friendly meds list.</p>
-
-          <p>The user is responsible for cross-checking the information produced against the SCR output the check for errors.</p>
+          <p>Easy to use system to create a consistently formatted patient note for a standard ITU patient. The input order takes into account the actual order of output on the system, which means these can be inputted much more quickly.</p>
+          <p>The order of using these screens is:</p>
+          <p>The user is responsible for cross-checking the information produced for errors.</p>
           <p>No data is saved / stored by using this app.</p>
       </div>
       <div class="modal-footer">
@@ -170,6 +225,6 @@
 
     <script src="bootstrap.bundle.min.js"></script>
     <script src='jquery-3.5.1.min.js'></script>    
-    <script src='meds.js'></script>      
+    <script src='itu.js'></script>      
   </body>
 </html>
